@@ -1,32 +1,48 @@
-#include "healtcareproject.h"
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 // USER AUTHENTICATION
+
+struct User
+{
+    char username[50];
+    char password[50];
+    char role[20];
+};
 
 int authenticate(struct User u, char *username, char *password)
 {
     return strcmp(u.username, username) == 0 && strcmp(u.password, password) == 0;
 }
 
+// PERSON → PATIENT / DOCTOR / STAFF
 
-// ...existing code...
+struct Patient
 {
-  "configurations": [
-    {
-      "name": "Linux",
-      "compilerPath": "/usr/bin/g++",
-      "intelliSenseMode": "gcc-x64",
-      "includePath": [
-        "${workspaceFolder}/**",
-        "/usr/include",
-        "/usr/include/c++/11"
-      ],
-      "cppStandard": "c++17"
-    }
-  ],
-  "version": 4
-}
-// ...existing code...// PERSON → PATIENT / DOCTOR / STAFF
+    char name[50];
+    int age;
+    char phone[30];
+    char disease[50];
+    char reports[10][50];
+    int report_count;
+    char appointments[10][50];
+    int appt_count;
+};
+
+struct Doctor
+{
+    char name[50];
+    char phone[30];
+    char speciality[50];
+};
+
+struct Staff
+{
+    char name[50];
+    char phone[30];
+    char role[50];
+};
 
 // APPOINTMENT
 
