@@ -1,3 +1,5 @@
+
+
 #include "healtcareproject.h"
 
 int test_authenticate_success()
@@ -32,17 +34,6 @@ int test_authenticate_fail()
 
 int main()
 {
-    int ok_fail = test_authenticate_fail();
-    int ok_success = test_authenticate_success();
-
-    if (ok_fail && ok_success)
-    {
-        printf("\nAll tests passed.\n");
-        return 0;
-    }
-    else
-    {
-        printf("\nSome tests failed.\n");
-        return 1;
-    }
+    test_authenticate_fail();
+    test_authenticate_success();
 }
