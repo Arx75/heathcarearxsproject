@@ -60,8 +60,8 @@ int test_admin_dashboard()
 
 int main()
 {
-    test_admin_dashboard()
-        test_show_report()
-            test_authenticate_fail();
+    test_admin_dashboard();
+    test_show_report();
+    test_authenticate_fail();
     test_authenticate_success();
 }
