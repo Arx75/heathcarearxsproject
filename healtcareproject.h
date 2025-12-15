@@ -4,7 +4,7 @@
 // ...existing code...
 #pragma once
 
-#include <stdio>  // C++-style; or use <stdio.h> for C compatibility
+#include <stdio.h>  // C++-style; or use <stdio.h> for C compatibility
 // ...existing code...
 #include <string.h>
 
