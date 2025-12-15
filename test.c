@@ -32,8 +32,22 @@ int test_authenticate_fail()
     return expected == actual;
 }
 
+int test_show_report()
+{
+    show_report("John", "Blood_Test");
+
+    int expected = 1;
+    int actual = 1;
+
+    printf("\n[Test Show Report] expected: %d, actual: %d, success: %d\n",
+           expected, actual, expected == actual);
+
+    return expected == actual;
+}
+
 int main()
 {
-    test_authenticate_fail();
+    test_show_report()
+        test_authenticate_fail();
     test_authenticate_success();
 }
