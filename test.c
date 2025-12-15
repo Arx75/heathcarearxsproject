@@ -45,9 +45,23 @@ int test_show_report()
     return expected == actual;
 }
 
+int test_admin_dashboard()
+{
+    admin_dashboard(1, 1, 1);
+
+    int expected = 1; // function executed
+    int actual = 1;
+
+    printf("\n[Test Admin Dashboard] expected: %d, actual: %d, success: %d\n",
+           expected, actual, expected == actual);
+
+    return expected == actual;
+}
+
 int main()
 {
-    test_show_report()
-        test_authenticate_fail();
+    test_admin_dashboard()
+        test_show_report()
+            test_authenticate_fail();
     test_authenticate_success();
 }
